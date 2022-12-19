@@ -1,0 +1,102 @@
+@import "tailwindcss/components";
+@layer components {
+  /* 按鈕預設狀態 */
+  .btn {
+    @apply 
+    flex justify-center items-center gap-1
+    px-3 py-[6px] 
+    shadow-sm 
+    transition ease-in-out duration-300 
+    rounded-[3px] 
+    h-[2.2rem]
+    whitespace-nowrap font-medium
+    /* 禁用狀態 */
+    disabled:bg-gray-300 
+    disabled:text-gray-400
+    disabled:cursor-not-allowed
+    /* 啟用狀態 */
+    enabled:text-white
+  }
+
+  /* 只有icon的button */
+  .btn-icon {
+    @apply 
+    btn
+    p-[6px]
+    shadow-none
+    text-gray-400
+    hover:bg-slate-200
+  }
+
+  /* ============= sm ============= */
+  .btn.btn-sm {
+    @apply text-[1.1rem] h-[2.1rem]
+  }
+  .btn.btn-sm .icon {
+    @apply w-5 h-5
+  }
+
+  /* ============= md ============= */
+  .btn.btn-md {
+    @apply text-[1.3rem] h-[2.3rem]
+  }
+  .btn.btn-md .icon {
+    @apply w-20 h-6
+  }
+
+  /* ============= lg ============= */
+  .btn.btn-lg {
+    @apply text-[1.5rem] h-[2.5rem]
+  }
+  .btn.btn-lg .icon {
+    @apply w-7 h-7
+  }
+
+  /* 只用來控制顏色 */
+  .btn-primary {
+    @apply 
+    /* 啟用狀態 */
+    enabled:bg-blue-500 
+    enabled:hover:bg-blue-600 
+  }
+
+  /* 只用來控制顏色 */
+  .btn-secondary {
+    @apply 
+    /* 啟用狀態 */
+    enabled:bg-indigo-500 
+    enabled:hover:bg-indigo-600 
+  }
+
+  /* 只用來控制顏色 */
+  .btn-opacity {
+    @apply 
+    /* 啟用狀態 */
+    enabled:bg-white/20 
+    enabled:hover:bg-white/30 
+  }
+
+  /* 只用來控制顏色 */
+  .btn-blue {
+    @apply 
+    /* 啟用狀態 */
+    enabled:bg-blue-500 
+    enabled:hover:bg-blue-600 
+  }
+
+  /* 只用來控制顏色 */
+  .btn-green {
+    @apply 
+    /* 啟用狀態 */
+    enabled:bg-green-500
+    enabled:hover:bg-green-600
+  }
+
+  /* 只用來控制顏色 */
+  .btn-yellow {
+    @apply 
+    /* 啟用狀態 */
+    enabled:bg-yellow-500
+    enabled:hover:bg-yellow-600
+  }
+}
