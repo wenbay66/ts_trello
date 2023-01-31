@@ -5,26 +5,30 @@ type Props = {
   type?: string;
   disabled?: boolean;
   className?: string;
+  onClick?: () => void
 };
 
-const ButtonTypes = {
-  'blue': 'enabled:bg-blue-500 enabled:hover:bg-blue-600 ',
-  'green': 'enabled:bg-green-500 enabled:hover:bg-green-600',
-  'yellow': 'enabled:bg-yellow-500 enabled:hover:bg-yellow-600',
-  'orange': 'enabled:bg-orange-500 enabled:hover:bg-orange-600',
-  'red': 'enabled:bg-red-500 enabled:hover:bg-red-600',
-  'violet': 'enabled:bg-violet-500 enabled:hover:bg-violet-600',
-  'opacity': 'enabled:bg-white/20 enabled:hover:bg-white/30 '
+const ButtonTypes: Record<string , string> = {
+  'blue': 'btn-blue',
+  'white': 'btn-white',
+  'green': 'btn-green',
+  'yellow': 'btn-yellow',
+  'orange': 'btn-orange',
+  'red': 'btn-red',
+  'violet': 'btn-violet',
+  'opacity': 'btn-opacity',
+  'navbar': 'btn-navbar'
 }
 
 const Button = (props: Props) => {
   const {
-    type = "pink",
-    size = "md",
+    type = "blue",
+    size = "sm",
     disabled = false,
     className = "",
     children,
     icon,
+    onClick,
   } = props;
 
   // 按鈕的尺寸
@@ -36,6 +40,7 @@ const Button = (props: Props) => {
   return (
     <button
       disabled={disabled}
+      onClick={onClick}
       className={`
         ${children ? "btn" : "btn-icon"}
         ${ButtonTypes[type as keyof typeof ButtonTypes]}
@@ -44,12 +49,7 @@ const Button = (props: Props) => {
         ${className}
       `}
     >
-      {children ? (
-        <>
-          {icon}
-          {children}
-        </>
-      ) : icon}
+      {icon} {children}
     </button>
   );
 };

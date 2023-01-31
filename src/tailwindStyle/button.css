@@ -8,8 +8,7 @@
     shadow-sm 
     transition ease-in-out duration-300 
     rounded-[3px] 
-    h-[2.2rem]
-    whitespace-nowrap font-medium
+    whitespace-nowrap font-normal
     /* 禁用狀態 */
     disabled:bg-gray-300 
     disabled:text-gray-400
@@ -28,44 +27,79 @@
     hover:bg-slate-200
   }
 
-  /* ============= sm ============= */
+  /* ============= sm ============= h-[2.1rem] */
   .btn.btn-sm {
-    @apply text-[1.1rem] h-[2.1rem]
+    @apply text-[1rem] 
   }
-  .btn.btn-sm .icon {
-    @apply w-5 h-5
+  .btn-icon.btn-sm {
+    @apply w-[2.1rem]
   }
 
-  /* ============= md ============= */
+  /* ============= md ============= h-[2.3rem] */
   .btn.btn-md {
-    @apply text-[1.3rem] h-[2.3rem]
+    @apply text-[1.3rem] 
   }
-  .btn.btn-md .icon {
-    @apply w-20 h-6
+  .btn-icon.btn-md {
+    @apply w-[2.3rem]
   }
 
-  /* ============= lg ============= */
+  /* ============= lg ============= h-[2.5rem] */
   .btn.btn-lg {
-    @apply text-[1.5rem] h-[2.5rem]
+    @apply text-[1.5rem] 
   }
-  .btn.btn-lg .icon {
-    @apply w-7 h-7
+  .btn-icon.btn-lg {
+    @apply w-[2.5rem]
   }
 
-  /* 只用來控制顏色 */
-  .btn-primary {
-    @apply 
+  .btn-blue {
+    @apply
     /* 啟用狀態 */
     enabled:bg-blue-500 
-    enabled:hover:bg-blue-600 
+    enabled:hover:bg-blue-600
+  }
+
+  .btn-white {
+    @apply
+    /* 啟用狀態 */
+    enabled:bg-white 
+    enabled:hover:bg-slate-100 
+    enabled:text-black
+  }
+
+  .btn-green {
+    @apply
+    /* 啟用狀態 */
+    enabled:bg-green-500 
+    enabled:hover:bg-green-600
+  }
+
+  .btn-yellow {
+    @apply
+    /* 啟用狀態 */
+    enabled:bg-yellow-500 
+    enabled:hover:bg-yellow-600
+  }
+
+  .btn-orange {
+    @apply
+    /* 啟用狀態 */
+    enabled:bg-orange-500 
+    enabled:hover:bg-orange-600
+  }
+
+  .btn-orange {
+    @apply
+    /* 啟用狀態 */
+    enabled:bg-red-500 
+    enabled:hover:bg-red-600
   }
 
   /* 只用來控制顏色 */
-  .btn-secondary {
+  .btn-violet {
     @apply 
     /* 啟用狀態 */
-    enabled:bg-indigo-500 
-    enabled:hover:bg-indigo-600 
+    enabled:bg-violet-500 
+    enabled:hover:bg-violet-600
   }
 
   /* 只用來控制顏色 */
@@ -73,30 +107,19 @@
     @apply 
     /* 啟用狀態 */
     enabled:bg-white/20 
-    enabled:hover:bg-white/30 
+    enabled:hover:bg-white/30
   }
 
   /* 只用來控制顏色 */
-  .btn-blue {
+  .btn-navbar {
     @apply 
+    justify-start
+    font-semibold
     /* 啟用狀態 */
-    enabled:bg-blue-500 
-    enabled:hover:bg-blue-600 
+    enabled:bg-inherit 
+    enabled:hover:bg-gray-200
+    enabled:text-slate-700
+    enabled:shadow-transparent
   }
 
-  /* 只用來控制顏色 */
-  .btn-green {
-    @apply 
-    /* 啟用狀態 */
-    enabled:bg-green-500
-    enabled:hover:bg-green-600
-  }
-
-  /* 只用來控制顏色 */
-  .btn-yellow {
-    @apply 
-    /* 啟用狀態 */
-    enabled:bg-yellow-500
-    enabled:hover:bg-yellow-600
-  }
 }

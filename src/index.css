@@ -3,6 +3,12 @@
 @import "tailwindcss/utilities";
 @import "./tailwindStyle/button.css";
 
+@layer components {
+  .flex-center {
+    @apply flex justify-center items-center
+  }
+}
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',

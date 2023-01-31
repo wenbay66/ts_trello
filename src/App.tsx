@@ -1,15 +1,55 @@
-import React, { useState } from "react";
-import Modal from "./components/Modal";
+import React, { useState, useEffect } from "react";
+// import * as ReactDOM from 'react-dom';
+// Layout
+import Contact from './Layout/Content';
+import Navbar from "./Layout/Navbar";
+import Header from "./Layout/Header";
+// component
 import Button from "./components/Button";
-import Header from "./components/Header";
+
 import { ReactComponent as IconPen } from "./assets/icon/pen.svg";
 import { ReactComponent as IconStar } from "./assets/icon/start.svg";
 
 const App = () => {
+  useEffect(() => {
+    console.log('HH')
+  }, [])
+
+  return (<div>123</div>)
+};
+
+const App2 = () => {
+
+  const [ is_showNvabar, set_is_showNvabar ] = useState<boolean>(false)
+
+  // console.log('is_showNvabar = ', is_showNvabar)
+
+  // const [ s_arr, set_s_arr ] = useState<string[]>([]);
+  // useEffect(() => {
+  //   console.log('HH')
+  // }, [s_arr])
+  // return <div>
+  //   <Button onClick={() => set_s_arr(prev => [...prev, 'ABC'])}>add</Button>
+  //   <Button onClick={() => set_s_arr(prev => {
+  //     const tmp = [...prev]
+  //     tmp.pop();
+  //     return tmp
+  //   })}>remove</Button>
+  // </div>
+
   return (
-    <div className="bg-blue-100 h-[100vh] w-[100vw] flex flex-col">
-      <Header />
-    </div>
+    <section className="bg-blue-100 h-screen w-screen flex">
+
+      <section className="flex-1 flex flex-col bg-red-500">
+        <Header is_showNvabar={is_showNvabar} set_is_showNvabar={set_is_showNvabar} />
+        
+        <Contact />
+        
+      </section>
+
+      <Navbar is_showNvabar={is_showNvabar} set_is_showNvabar={set_is_showNvabar} />
+      
+    </section>
   );
 };
 
@@ -96,6 +136,21 @@ function App1() {
       </div>
     </div>
   );
-}
+};
+
+// const App2 = () => {
+
+//   const canvasRef = useRef(null);
+
+//   useEffect(() => {
+//     const canvas = canvasRef.current
+//     const context = canvas.getContext('2d')
+//     //Our first draw
+//     context.fillStyle = '#000000'
+//     context.fillRect(0, 0, context.canvas.width, context.canvas.height)
+//   }, []);
+
+//   return <canvas ref={canvasRef} />
+// }
 
 export default App;
