@@ -11,14 +11,6 @@ import { ReactComponent as IconPen } from "./assets/icon/pen.svg";
 import { ReactComponent as IconStar } from "./assets/icon/start.svg";
 
 const App = () => {
-  useEffect(() => {
-    console.log('HH')
-  }, [])
-
-  return (<div>123</div>)
-};
-
-const App2 = () => {
 
   const [ is_showNvabar, set_is_showNvabar ] = useState<boolean>(false)
 
